@@ -1,4 +1,4 @@
-# URL Shortener
+# 🔗 URL Shortener
 
 A backend URL shortening service built with Spring Boot. 
 Converts long URLs into short, manageable links and redirects users seamlessly. 
