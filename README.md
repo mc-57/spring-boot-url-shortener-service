@@ -1,8 +1,10 @@
+# URL Shortener
+
 A backend URL shortening service built with Spring Boot. 
 Converts long URLs into short, manageable links and redirects users seamlessly. 
 Includes expiration handling and Redis caching for high performance.
 
-## Feature
+## 🚀 Features
 
 - Shortens any valid URL
 - Optional expiration time for each shortened URL
@@ -11,7 +13,7 @@ Includes expiration handling and Redis caching for high performance.
 - API testing enabled via Swagger UI
 - Docker support for containerized deployment
 
-## Tech Stack
+## 🧰 Tech Stack
 - Java 17
 - Spring Boot 3.4.3
 - Spring Web, JPA, Validation
@@ -19,22 +21,37 @@ Includes expiration handling and Redis caching for high performance.
 - Redis (caching layer)
 - springdoc-openapi (Swagger UI)
 - Docker
-- Junit & Mockito 
+- Junit & Mockito
 
-## Setup Instruction (Docker Only)
+## 🐳 Docker Image
 
-### Prerequisites
+You can use the pre-built Docker image directly from Docker Hub:
 
-- `url-shortener-app.tar` (your Docker image)
-- `docker-compose.yml` file (for container orchestration)
-- Docker installed and running
+🔗 [michellec07/spring-boot-url-shortener](https://hub.docker.com/r/michellec07/spring-boot-url-shortener)
 
-### Load and Run
+## ⚙️ Setup Instruction (Docker Only)
+
+### 📦 Prerequisites
+
+Ensure you have the following installed:
+
+- [Docker](https://docs.docker.com/get-docker/)
+- [Docker Compose](https://docs.docker.com/compose/install/)
+
+Clone this repository to get the necessary files:
+
+- `docker-compose.yml` — defines the backend and MySQL containers  
+
+### ▶️ Run the Application
 
 ```bash
-# 1. Load the Docker image
-docker load -i url-shortener-app.tar
+# Step 1: Pull the pre-built backend image from Docker Hub
+docker pull michellec07/spring-boot-url-shortener:latest
 
-# 2. Start the application and Redis using docker-compose
-docker-compose up
+# Step 2: Start backend and MySQL containers
+docker-compose up -d
+```
 
+### 📺 Access the Application
+
+Visit [http://localhost:8080/swagger-ui](http://localhost:8080/swagger-ui) in your browser to access the Swagger UI for testing the API.
